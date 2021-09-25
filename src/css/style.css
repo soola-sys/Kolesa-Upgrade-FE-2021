@@ -6,3 +6,25 @@
     color: #2c3e50;
     margin-top: 60px;
 }
+
+body {
+    background: #1c1819;
+}
+
+.wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.modal-content {
+    margin-right: 26px;
+}
