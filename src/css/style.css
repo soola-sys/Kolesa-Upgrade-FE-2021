@@ -1,10 +1,8 @@
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
 }
 
 * {
@@ -14,11 +12,15 @@
 }
 
 body {
-    background: #1c1819;
-    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(28, 24, 25, 0.6);
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper {
@@ -28,16 +30,13 @@ body {
     border-radius: 16px;
 }
 
-.modal {
+.modal-outer {
     display: flex;
     flex-direction: row;
     padding: 60px 56px;
-    position: relative;
-    background: url(/src/assets/CloseIcon.svg) no-repeat;
-    background-position: top 24px right 24px;
 }
 
-.modal-content {
+.modal-inner {
     margin-right: 23px;
 }
 
@@ -45,12 +44,19 @@ body {
     margin-bottom: 16px;
 }
 
+.modal-mini > button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .image-small:not(:last-child) {
     margin-right: 8px;
 }
 
-.image-small:nth-child(2) {
+.image-small:active {
     border: 1px solid #2a81dd;
+    border-radius: 8px;
 }
 
 .main-wrapper {
