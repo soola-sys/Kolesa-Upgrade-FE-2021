@@ -34,10 +34,43 @@ body {
     display: flex;
     flex-direction: row;
     padding: 60px 56px;
+    position: relative;
 }
 
 .modal-inner {
     margin-right: 23px;
+}
+
+.modal-button {
+    position: absolute;
+    right: 32px;
+    top: 30px;
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    opacity: 1;
+}
+
+.modal-button::before,
+.modal-button::after {
+    position: absolute;
+    left: 0;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: #333;
+}
+
+.modal-button::before {
+    transform: rotate(45deg);
+}
+
+.modal-button::after {
+    transform: rotate(-45deg);
 }
 
 .modal-image {
@@ -65,6 +98,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 24px;
+    align-items: flex-end;
 }
 
 .main {
@@ -89,11 +123,11 @@ body {
 .main-balance {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background: #f0fafd;
     border-radius: 16px;
-    max-width: 196px;
-    width: 100%;
+    min-height: 68px;
+    height: 100%;
 }
 
 .description {
@@ -102,6 +136,13 @@ body {
 
 .balance-title {
     color: #888b94;
+}
+
+.main-image {
+    background: url(/src/assets/bag.png);
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
 }
 
 .button {
@@ -123,12 +164,14 @@ body {
 .color {
     display: flex;
     flex-direction: row;
+    max-width: 573px;
+    flex-wrap: wrap;
+    gap: 8px 0;
 }
 
 .color-item {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-radius: 8px;
     border: 1px solid rgba(28, 24, 25, 0.1);
     padding: 8px;
