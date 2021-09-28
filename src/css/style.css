@@ -41,36 +41,21 @@ body {
     margin-right: 23px;
 }
 
+.modal-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 25px;
+    right: 25px;
+}
+
 .modal-button {
-    position: absolute;
-    right: 32px;
-    top: 30px;
-    width: 25px;
-    height: 25px;
-    opacity: 0.3;
+    border: none;
     cursor: pointer;
-}
-
-.modal-button:hover {
-    opacity: 1;
-}
-
-.modal-button::before,
-.modal-button::after {
-    position: absolute;
-    left: 0;
-    content: ' ';
-    height: 25px;
-    width: 2px;
-    background-color: #333;
-}
-
-.modal-button::before {
-    transform: rotate(45deg);
-}
-
-.modal-button::after {
-    transform: rotate(-45deg);
+    font-size: 2rem;
+    background: none;
+    color: #888b94;
+    border-radius: 2px;
 }
 
 .modal-image {
@@ -126,8 +111,6 @@ body {
     justify-content: center;
     background: #f0fafd;
     border-radius: 16px;
-    min-height: 68px;
-    height: 100%;
 }
 
 .description {

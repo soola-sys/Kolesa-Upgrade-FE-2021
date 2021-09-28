@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-        <link rel="stylesheet" href="/src/css/style.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/src/css/style.css" />
         <title>Домашняя работа 2</title>
     </head>
     <body>
@@ -13,7 +13,7 @@
             <div class="wrapper">
                 <div class="modal-outer">
                     <div class="modal-icon">
-                        <a class="modal-button"></a>
+                        <button class="modal-button">&times</button>
                     </div>
                     <div class="modal-inner">
                         <div class="modal-image">
@@ -76,13 +76,15 @@
                                 <div class="color">
                                     <div class="color-item">
                                         <div class="color-image"></div>
-                                        <input
+                                        <div class="color-radio">
+                                            <input
                                             id="radio-1"
                                             type="radio"
                                             name="radio"
                                             value="1"
                                         />
-                                        <label for="radio-1">Синий</label>
+                                        <label for="radio-1" class="label-color">Синий</label>
+                                        </div>
                                     </div>
                                     <div class="color-item">
                                         <div class="color-image"></div>
@@ -270,5 +272,6 @@
                 </div>
             </div>
         </div>
+        <script src="/src/js/main.js"></script>
     </body>
 </html>
