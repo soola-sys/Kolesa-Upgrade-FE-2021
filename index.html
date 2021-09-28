@@ -1,13 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <title>Домашняя работа 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="wrapper">
+                <div class="modal-outer">
+                    <div class="modal-icon">
+                        <button class="modal-button">&times</button>
+                    </div>
+                    <div class="modal-inner">
+                        <div class="modal-image">
+                            <img
+                                src="/src/assets/hoodie.png"
+                                alt="Hoodie"
+                                class="image-big"
+                                width="330"
+                                height="330"
+                            />
+                        </div>
+                        <div class="modal-mini">
+                            <button type="button"><img
+                                src="/src/assets/white.png"
+                                alt="White hoodie"
+                                class="image-small"
+                                width="50"
+                                height="50"
+                            /></button>
+                           <button type="button"><img
+                            src="/src/assets/blue.png"
+                            alt="Blue"
+                            class="image-small"
+                            width="50"
+                            height="50"
+                        /></button>
+                            <button type="button"><img
+                                src="/src/assets/gray.png"
+                                alt="Gray"
+                                class="image-small"
+                                width="50"
+                                height="50"
+                            /></button>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <h3 class="main-title">
+                            Футболка "Эволюционируй или сдохни"
+                        </h3>
+                        <div class="main-wrapper">
+                            <div class="main-points">
+                                <p class="points-title">100 баллов</p>
+                                <button class="button" type="button">
+                                    Заказать
+                                </button>
+                            </div>
+                            <div class="main-balance">
+                                <div class="description">
+                                    <p class="balance-title">Твой баланс:</p>
+                                    <span class="balance-subtitle"
+                                        >3 945 баллов</span
+                                    >
+                                </div>
+                                <div class="main-image"></div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-color">
+                                <p class="product-title">Цвета:</p>
+                                <div class="color">
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                            id="radio-1"
+                                            type="radio"
+                                            name="radio"
+                                            value="1"
+                                        />
+                                        <label for="radio-1" class="label-color">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-2"
+                                                type="radio"
+                                                name="radio"
+                                                value="2"
+                                            />
+                                            <label for="radio-2">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                    <div class="color-item">
+                                        <div class="color-image"></div>
+                                        <div class="color-radio">
+                                            <input
+                                                id="radio-3"
+                                                type="radio"
+                                                name="radio"
+                                                value="3"
+                                            />
+                                            <label for="radio-3">Синий</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-size">
+                                    <p class="product-title">Размер:</p>
+                                    <div class="product-options">
+                                        <div class="options-radio">
+                                            <input
+                                                id="radio-4"
+                                                type="radio"
+                                                name="radio"
+                                                value="4"
+                                            />
+                                            <label for="radio-4">S</label>
+                                        </div>
+                                        <div class="options-radio">
+                                            <input
+                                                id="radio-5"
+                                                type="radio"
+                                                name="radio"
+                                                value="5"
+                                            />
+                                            <label for="radio-5">M</label>
+                                        </div>
+                                        <div class="options-radio">
+                                            <input
+                                                id="radio-6"
+                                                type="radio"
+                                                name="radio"
+                                                value="6"
+                                            />
+                                            <label for="radio-6">L</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-item">
+                                <p class="detail-title">Детали:</p>
+                                <span class="detail-subtitle"
+                                    >Брендированная толстовка от Qazaq Republic.
+                                    Материал: Хлопок 80%, Вискоза 20%</span
+                                >
+                            </div>
+                            <div class="product-item">
+                                <p class="detail-title">Как выбрать размер:</p>
+                                <span class="detail-subtitle"
+                                    >Написать дяде Рику для уточнения.</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/src/js/main.js"></script>
+    </body>
 </html>
