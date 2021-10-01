@@ -47,7 +47,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 40px 32px 32px;
+    padding: 29px 0;
 }
 
 .header-logo {
@@ -98,7 +98,6 @@ body {
 }
 
 .header-user:hover {
-    transition: transform 250ms ease-in-out;
     border-bottom: 2px solid#2A81DD;
 }
 
@@ -132,12 +131,15 @@ body {
     flex: 1 1 auto;
 }
 
+.main-products {
+    margin-bottom: 200px;
+}
+
 .main-promo {
     margin-bottom: 14px;
 }
 
 .aside {
-    padding-left: 32px;
     margin-right: 131px;
 }
 
@@ -146,12 +148,19 @@ body {
     list-style: none;
 }
 
-.menu-item:not(last-child) {
-    margin-bottom: 26px;
+.menu-item:hover::before {
+    content: '';
+    margin-right: 5px;
+    border: 2px solid #2a81dd;
+    border-radius: 10px;
 }
 
 .menu-item:hover {
-    border-bottom: 2px solid #2a81dd;
+    font-weight: 600;
+}
+
+.menu-item:not(last-child) {
+    margin-bottom: 26px;
 }
 
 .main-hotbuttons {
@@ -162,11 +171,23 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 24px 0;
+    gap: 20px 0;
     margin-bottom: 40px;
 }
 
-.main-hotbuttons > button {
+.main-hotbuttons .score-item-1:hover {
+    background-color: #dbfbcd;
+}
+
+.main-hotbuttons .score-item-2:hover {
+    background-color: #fff4cc;
+}
+
+.main-hotbuttons .score-item-3:hover {
+    background-color: #d3e9ff;
+}
+
+.main-hotbuttons .hotbuttons-button {
     font-weight: 600;
     line-height: 32px;
     font-size: 20px;
@@ -175,13 +196,21 @@ body {
     cursor: pointer;
 }
 
-.score-item {
+.hotbuttons-button div {
     padding: 22px 73px 22px 89px;
     border-radius: 16px;
-    background-color: #eff8eb;
-    background-image: url(/src/assets/krest.png);
-    background-repeat: no-repeat;
-    background-position: 25px 17px;
+}
+
+.score-item-1 {
+    background: no-repeat 25px 17px url(/src/assets/krest.png) #eff8eb;
+}
+
+.score-item-2 {
+    background: no-repeat 25px 17px url(/src/assets/question.png) #fffae7;
+}
+
+.score-item-3 {
+    background: no-repeat 25px 17px url(/src/assets/gift.png) #e9f2fb;
 }
 
 .main-goods {
@@ -190,6 +219,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 16px;
+    gap: 10px 0;
 }
 
 .goods-item {
@@ -256,6 +286,7 @@ body {
 
 .main-catalog-description {
     padding: 16px;
+    position: relative;
 }
 
 .main-catalog-description .price {
@@ -293,6 +324,8 @@ body {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
+    visibility: hidden;
+    position: absolute;
 }
 
 .size {
@@ -304,7 +337,6 @@ body {
 /* ВЕРСТАЕМ ФУТЕР */
 .footer {
     text-align: center;
-    width: 100%;
     background: #1c1819;
     color: white;
     height: auto;
@@ -318,10 +350,8 @@ body {
 }
 
 .contact-idea {
-    width: 100%;
     text-align: left;
-    white-space: pre-line;
-    margin-right: 30px;
+    width: 100%;
 }
 
 .contact-text {
@@ -348,7 +378,7 @@ body {
     border-radius: 8px;
     color: #2a81dd;
     background: white;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .link-wrapper {
