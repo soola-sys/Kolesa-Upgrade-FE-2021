@@ -38,20 +38,14 @@ body {
 }
 
 /* ВЕРСТАЕМ ШАПКУ */
-.header {
-    width: 100%;
-}
 
 .header-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 29px 0;
-}
-
-.header-logo {
-    margin-right: 66px;
+    padding: 32px 0;
+    gap: 0 66px;
 }
 
 .header-search {
@@ -81,7 +75,6 @@ body {
 }
 
 .header-search input {
-    width: 308px;
     height: 44px;
     background: #f2f2f3;
     border-radius: 8px;
@@ -159,7 +152,7 @@ body {
     font-weight: 600;
 }
 
-.menu-item:not(last-child) {
+.menu-item:not(:last-child) {
     margin-bottom: 26px;
 }
 
@@ -167,23 +160,20 @@ body {
     width: 100%;
     max-width: 1038px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px 0;
+    gap: 24px;
     margin-bottom: 40px;
 }
 
-.main-hotbuttons .score-item-1:hover {
+.main-hotbuttons .item-1:hover {
     background-color: #dbfbcd;
 }
 
-.main-hotbuttons .score-item-2:hover {
+.main-hotbuttons .item-2:hover {
     background-color: #fff4cc;
 }
 
-.main-hotbuttons .score-item-3:hover {
+.main-hotbuttons .item-3:hover {
     background-color: #d3e9ff;
 }
 
@@ -196,20 +186,20 @@ body {
     cursor: pointer;
 }
 
-.hotbuttons-button div {
+.hotbuttons-button .score-item {
     padding: 22px 73px 22px 89px;
     border-radius: 16px;
 }
 
-.score-item-1 {
+.item-1 {
     background: no-repeat 25px 17px url(/src/assets/krest.png) #eff8eb;
 }
 
-.score-item-2 {
+.item-2 {
     background: no-repeat 25px 17px url(/src/assets/question.png) #fffae7;
 }
 
-.score-item-3 {
+.item-3 {
     background: no-repeat 25px 17px url(/src/assets/gift.png) #e9f2fb;
 }
 
@@ -220,6 +210,7 @@ body {
     align-items: center;
     margin-bottom: 16px;
     gap: 10px 0;
+    width: 100%;
 }
 
 .goods-item {
@@ -234,7 +225,7 @@ body {
 .goods-item label {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: center;
     height: 36px;
     cursor: pointer;
     padding: 6px 12px;
@@ -259,11 +250,16 @@ body {
 
 .main-catalog-item {
     border-radius: 8px;
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
 }
 
 .main-catalog-item:hover {
     box-shadow: 0 2px 10px rgba(28, 24, 25, 0.3);
+}
+
+.main-catalog-item:hover .catalog-button {
+    visibility: visible;
 }
 
 .main-catalog-image {
@@ -325,7 +321,6 @@ body {
     border-radius: 8px;
     cursor: pointer;
     visibility: hidden;
-    position: absolute;
 }
 
 .size {
