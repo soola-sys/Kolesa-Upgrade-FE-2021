@@ -85,11 +85,6 @@ body {
     line-height: 28px;
 }
 
-.header-user {
-    display: flex;
-    flex-direction: row;
-}
-
 .header-user:hover {
     border-bottom: 2px solid#2A81DD;
 }
@@ -97,12 +92,20 @@ body {
 .user-button {
     border: none;
     background: none;
-    padding-right: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-button div {
+    text-align: left;
 }
 
 .user-title {
     color: #2a81dd;
     font-weight: 600;
+    padding: 0 2px 5px 0;
 }
 
 .user-subtitle {
@@ -112,6 +115,7 @@ body {
 
 .user-button .user-image {
     border-radius: 50%;
+    margin-right: 16px;
 }
 
 /* ЗАКОНЧИЛИ ВЕРСТАТЬ ШАПКУ */
