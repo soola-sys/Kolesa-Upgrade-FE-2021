@@ -25,6 +25,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1368px;
     margin: 0 auto;
 }
@@ -45,7 +46,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 32px 0;
-    gap: 0 66px;
 }
 
 .header-search {
@@ -57,6 +57,7 @@ body {
 
 .header-inner {
     width: 100%;
+    max-width: 1038px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,6 +69,7 @@ body {
     top: 13px;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 .header-search input:focus {
@@ -145,11 +147,26 @@ body {
     list-style: none;
 }
 
+.menu-item {
+    position: relative;
+}
+
+.menu-item::before {
+    content: '';
+    width: 0;
+    height: 36px;
+    left: -8px;
+    top: -25%;
+    border-radius: 10px;
+    background: #2a81dd;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    position: absolute;
+    transition: width 0.3s;
+}
+
 .menu-item:hover::before {
     content: '';
-    margin-right: 5px;
-    border: 2px solid #2a81dd;
-    border-radius: 10px;
+    width: 4px;
 }
 
 .menu-item:hover {
@@ -195,6 +212,11 @@ body {
     border-radius: 16px;
 }
 
+.hotbuttons-button .score-title {
+    max-width: 330px;
+    overflow: hidden;
+}
+
 .item-1 {
     background: no-repeat 25px 17px url(/src/assets/krest.png) #eff8eb;
 }
@@ -217,8 +239,7 @@ body {
     width: 100%;
 }
 
-.goods-item {
-    display: inline-block;
+.goods-item:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -227,11 +248,8 @@ body {
 }
 
 .goods-item label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
     cursor: pointer;
+    width: 100%;
     padding: 6px 12px;
     color: #2a81dd;
     border-radius: 8px;
@@ -249,7 +267,7 @@ body {
 .main-catalog {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 24px;
+    grid-gap: 0 24px;
 }
 
 .main-catalog-item {
@@ -349,14 +367,24 @@ body {
 }
 
 .contact-idea {
+    margin-right: 39px;
+}
+
+.contact-idea span {
+    display: block;
     text-align: left;
-    width: 100%;
+    white-space: pre;
 }
 
 .contact-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.contact-item {
+    padding: 31px 39px 31px 0;
+    width: 100%;
 }
 
 .social-link:not(:last-child) {
@@ -378,11 +406,7 @@ body {
     color: #2a81dd;
     background: white;
     cursor: pointer;
-}
-
-.link-wrapper {
-    padding: 31px 39px;
-    width: 100%;
+    width: 150px;
 }
 
 /* ЗАКОНЧИЛИ ВЕРСТАТЬ ФУТЕР */
