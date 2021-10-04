@@ -1,0 +1,209 @@
+.modal-wrapper {
+    display: none;
+    max-width: 1040px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.modal-outer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 60px 56px;
+    position: relative;
+}
+
+.modal-inner {
+    margin-right: 23px;
+}
+
+.modal-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 25px;
+    right: 25px;
+}
+
+.modal-button {
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    background: none;
+    color: #888b94;
+    border-radius: 2px;
+}
+
+.modal-image {
+    margin-bottom: 16px;
+}
+
+.modal-mini > button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.image-small:not(:last-child) {
+    margin-right: 8px;
+}
+
+.image-small:active {
+    border: 1px solid #2a81dd;
+    border-radius: 8px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: flex-end;
+}
+
+.content {
+    width: 100%;
+    max-width: 573px;
+    text-align: left;
+}
+
+.content-title {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.points-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 8px 0;
+}
+
+.content-balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0fafd;
+    border-radius: 16px;
+}
+
+.description {
+    padding: 8px 0 8px 8px;
+}
+
+.balance-title {
+    color: #888b94;
+}
+
+.content-image {
+    background: url(/src/assets/bag.png);
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.button {
+    padding: 6px;
+    background: #2a81dd;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+}
+
+/* Styling Options for colors */
+.color {
+    display: flex;
+    flex-direction: row;
+    max-width: 573px;
+    flex-wrap: wrap;
+    gap: 8px 0;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(28, 24, 25, 0.1);
+    padding: 8px;
+}
+
+.color-item:not(:last-child) {
+    margin: 0 8px 0 0;
+}
+
+.color-image {
+    background: url(/src/assets/color1.png);
+    width: 23px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.color-item input[type='radio'] {
+    display: none;
+}
+
+.color-item label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color-item input[type='radio']:checked + label {
+    background: #d6ecfb;
+    color: #1c1819;
+    border: none;
+}
+
+/* Styling Product Sizes */
+
+.options-radio:not(:last-child) {
+    margin-right: 8px;
+}
+
+.options-radio {
+    color: #2a81dd;
+    display: inline-block;
+}
+
+.options-radio input[type='radio'] {
+    display: none;
+}
+
+.options-radio label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+}
+
+.options-radio input[type='radio']:checked + label {
+    background: #d6ecfb;
+    color: #1c1819;
+    border: none;
+}
+
+.product-color > div {
+    margin-bottom: 24px;
+}
+
+.product-title {
+    margin-bottom: 8px;
+}
+
+.detail-title {
+    margin-bottom: 8px;
+}
+
+.product-item p {
+    font-weight: 600;
+}
