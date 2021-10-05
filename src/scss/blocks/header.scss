@@ -1,5 +1,5 @@
-@import 'vars.scss';
-@import 'mixins.scss';
+@import '../_vars.scss';
+@import '../_mixins.scss';
 
 .header {
     &__wrapper {
@@ -17,68 +17,72 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    &__search {
+        width: 308px;
+        vertical-align: middle;
+        white-space: nowrap;
+        position: relative;
+    }
 }
 
-.header-search {
-    width: 308px;
-    vertical-align: middle;
-    white-space: nowrap;
-    position: relative;
+.search {
+    &__button {
+        position: absolute;
+        left: 19px;
+        top: 13px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    &__input {
+        height: 44px;
+        background: #f2f2f3;
+        border-radius: 8px;
+        border: none;
+        color: #888b94;
+        padding: 8px 0 8px 56px;
+        font-size: 18px;
+        line-height: 28px;
+
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
-.header-search .header-button {
-    position: absolute;
-    left: 19px;
-    top: 13px;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
+.user {
+    &:hover {
+        border-bottom: 2px solid $light-blue;
+    }
 
-.header-search input:focus {
-    outline: none;
-}
+    &__button {
+        border: none;
+        background: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
 
-.header-search input {
-    height: 44px;
-    background: #f2f2f3;
-    border-radius: 8px;
-    border: none;
-    color: #888b94;
-    padding: 8px 0 8px 56px;
-    font-size: 18px;
-    line-height: 28px;
-}
+    &__wrapper {
+        text-align: left;
+    }
 
-.header-user:hover {
-    border-bottom: 2px solid#2A81DD;
-}
+    &__title {
+        color: $light-blue;
+        font-weight: 600;
+        padding: 0 2px 5px 0;
+    }
 
-.user-button {
-    border: none;
-    background: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-}
+    &__subtitle {
+        font-size: 13px;
+        line-height: 20px;
+    }
 
-.user-button div {
-    text-align: left;
-}
-
-.user-title {
-    color: #2a81dd;
-    font-weight: 600;
-    padding: 0 2px 5px 0;
-}
-
-.user-subtitle {
-    font-size: 13px;
-    line-height: 20px;
-}
-
-.user-button .user-image {
-    border-radius: 50%;
-    margin-right: 16px;
+    &__image {
+        border-radius: 50%;
+        margin-right: 16px;
+    }
 }

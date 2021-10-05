@@ -1,10 +1,9 @@
-@import 'vars.scss';
-@import 'mixins.scss';
-@import './blocks/aside.scss';
-@import './blocks/buttons.scss';
+@import './_vars.scss';
+@import './_mixins.scss';
 @import './blocks/footer.scss';
 @import './blocks/header.scss';
 @import './blocks/main.scss';
+@import './blocks/button.scss';
 @import './blocks/modal.scss';
 
 #app {
@@ -26,7 +25,7 @@ a {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #ffff;
+    background: $white;
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;

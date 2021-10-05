@@ -1,0 +1,12 @@
+
+@import '../_vars.scss';
+@import '../_mixins.scss';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0;
+}
