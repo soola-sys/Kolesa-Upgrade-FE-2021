@@ -267,8 +267,8 @@
                                 <div class="content__wrapper">
                                     <div class="content__points points">
                                         <p class="points__title">100 баллов</p>
-                                        <button class="points__button points__button_yellow button " type="button">
-                                            Заказать
+                                        <button class="points__button points__button_yellow button" type="button">
+                                            Попросить 50 баллов
                                         </button>
                                     </div>
                                     <div class="content__balance balance">
@@ -282,174 +282,45 @@
                                     </div>
                                 </div>
                                 <div class="product">
-                                    <div class="product-color">
-                                        <p class="product-title">Цвета:</p>
-                                        <div class="color">
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
+                                    <div class="product__inner">
+                                        <p class="product__title">Цвета:</p>
+                                        <div class="product__color color">
+                                            <div class="color__item">
+                                                <div class="color__image"></div>
+                                                <div class="color__radio">
                                                     <input
                                                     id="radio-1"
+                                                    class="color__input"
                                                     type="radio"
                                                     name="radio"
                                                     value="1"
                                                 />
-                                                <label for="radio-1" class="label-color">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-2"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="2"
-                                                    />
-                                                    <label for="radio-2">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
-                                                </div>
-                                            </div>
-                                            <div class="color-item">
-                                                <div class="color-image"></div>
-                                                <div class="color-radio">
-                                                    <input
-                                                        id="radio-3"
-                                                        type="radio"
-                                                        name="radio"
-                                                        value="3"
-                                                    />
-                                                    <label for="radio-3">Синий</label>
+                                                <label class="color__label" for="radio-1">Синий</label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-size">
-                                            <p class="product-title">Размер:</p>
-                                            <div class="product-options">
-                                                <div class="options-radio">
+                                        <div class="product__size">
+                                            <p class="product__title">Размер:</p>
+                                            <div class="product__options options">
+                                                <div class="options__radio">
                                                     <input
                                                         id="radio-4"
                                                         type="radio"
                                                         name="radio"
                                                         value="4"
+                                                        class="options__input"
                                                     />
-                                                    <label for="radio-4">S</label>
+                                                    <label class="options__label" for="radio-4">S</label>
                                                 </div>
-                                                <div class="options-radio">
+                                                <div class="options__radio">
                                                     <input
                                                         id="radio-5"
                                                         type="radio"
                                                         name="radio"
                                                         value="5"
+                                                        class="options__input"
                                                     />
-                                                    <label for="radio-5">M</label>
+                                                    <label class="options__label" for="radio-5">M</label>
                                                 </div>
                                                 <div class="options-radio">
                                                     <input
@@ -457,24 +328,25 @@
                                                         type="radio"
                                                         name="radio"
                                                         value="6"
+                                                        class="options__input"
                                                     />
-                                                    <label for="radio-6">L</label>
+                                                    <label class="options__label"  for="radio-6">L</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <div class="product-item">
-                                        <p class="detail-title">Детали:</p>
-                                        <span class="detail-subtitle"
+                                    <div class="product__detail detail">
+                                        <p class="detail__title">Детали:</p>
+                                        <span class="detail__subtitle"
                                             >Брендированная толстовка от Qazaq Republic.
                                             Материал: Хлопок 80%, Вискоза 20%</span
                                         >
                                     </div>
-                                    <div class="product-item">
-                                        <p class="detail-title">Как выбрать размер:</p>
-                                        <span class="detail-subtitle"
+                                    <div class="product__detail">
+                                        <p class="detail__title">Как выбрать размер:</p>
+                                        <span class="detail__subtitle"
                                             >Написать дяде Рику для уточнения.</span
                                         >
                                     </div>

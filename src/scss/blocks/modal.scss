@@ -2,7 +2,6 @@
 @import '../_mixins.scss';
 
 .modal {
-    display: none;
     max-width: 1040px;
     margin: 0 auto;
     background: #fff;
@@ -99,10 +98,10 @@
     }
 
     &__button {
-        width: 100%;
         height: 36px;
         padding: 6px 0;
         box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+        width: 184px;
 
         &_yellow {
             background: $b-yellow;
@@ -111,105 +110,113 @@
     }
 }
 
-.description {
-    padding: 8px 0 8px 8px;
+.balance {
+    &__description {
+        padding: 8px 0 8px 8px;
+    }
+
+    &__title {
+        color: #888b94;
+    }
+
+    &__image {
+        background: url(/src/assets/bag.png);
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
 }
 
-.balance-title {
-    color: #888b94;
+.product {
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        max-width: 573px;
+        flex-wrap: wrap;
+        gap: 8px 0;
+    }
+
+    &__color > div {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
 }
 
-.content-image {
-    background: url(/src/assets/bag.png);
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
+.color {
+    &__item {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        padding: 8px;
+
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__image {
+        background: url(/src/assets/color1.png);
+        width: 23px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label {
+            background: #d6ecfb;
+            color: #1c1819;
+            border: none;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.options {
+    &__radio {
+        color: #2a81dd;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label {
+            background: #d6ecfb;
+            color: #1c1819;
+            border: none;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px 10px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        border-radius: 8px;
+    }
+}
+
+.detail {
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
 }
 
 /* Styling Options for colors */
-.color {
-    display: flex;
-    flex-direction: row;
-    max-width: 573px;
-    flex-wrap: wrap;
-    gap: 8px 0;
-}
-
-.color-item {
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid rgba(28, 24, 25, 0.1);
-    padding: 8px;
-}
-
-.color-item:not(:last-child) {
-    margin: 0 8px 0 0;
-}
-
-.color-image {
-    background: url(/src/assets/color1.png);
-    width: 23px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.color-item input[type='radio'] {
-    display: none;
-}
-
-.color-item label {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.color-item input[type='radio']:checked + label {
-    background: #d6ecfb;
-    color: #1c1819;
-    border: none;
-}
 
 /* Styling Product Sizes */
-
-.options-radio:not(:last-child) {
-    margin-right: 8px;
-}
-
-.options-radio {
-    color: #2a81dd;
-    display: inline-block;
-}
-
-.options-radio input[type='radio'] {
-    display: none;
-}
-
-.options-radio label {
-    display: inline-block;
-    cursor: pointer;
-    padding: 5px 10px;
-    border: 1px solid rgba(28, 24, 25, 0.1);
-    border-radius: 8px;
-}
-
-.options-radio input[type='radio']:checked + label {
-    background: #d6ecfb;
-    color: #1c1819;
-    border: none;
-}
-
-.product-color > div {
-    margin-bottom: 24px;
-}
-
-.product-title {
-    margin-bottom: 8px;
-}
-
-.detail-title {
-    margin-bottom: 8px;
-}
-
-.product-item p {
-    font-weight: 600;
-}
