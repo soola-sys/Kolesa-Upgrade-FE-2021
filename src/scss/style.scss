@@ -1,0 +1,60 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+@import './blocks/aside.scss';
+@import './blocks/buttons.scss';
+@import './blocks/footer.scss';
+@import './blocks/header.scss';
+@import './blocks/main.scss';
+@import './blocks/modal.scss';
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #ffff;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1368px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ВЕРСТАЕМ ШАПКУ */
+
+/* ЗАКОНЧИЛИ ВЕРСТАТЬ ШАПКУ */
+
+/* ВЕРСТАЕМ ГЛАВНЫЙ БЛОК */
+
+/* ЗАКОНЧИЛИ ВЕРСТАТЬ ГЛАВНЫЙ БЛОК */
+
+/* ВЕРСТАЕМ ФУТЕР */
+
+/* ЗАКОНЧИЛИ ВЕРСТАТЬ ФУТЕР */

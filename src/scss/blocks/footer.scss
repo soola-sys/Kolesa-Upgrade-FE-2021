@@ -1,0 +1,59 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+
+.footer {
+    text-align: center;
+    background: $black;
+    color: $white;
+    height: auto;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-idea {
+    margin-right: 39px;
+}
+
+.contact-idea span {
+    display: block;
+    text-align: left;
+    white-space: pre;
+}
+
+.contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-item {
+    padding: 31px 39px 31px 0;
+    width: 100%;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 11px;
+}
+
+.social-title {
+    margin-bottom: 8px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 6px;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+    color: $light-blue;
+    background: $white;
+    cursor: pointer;
+    width: 150px;
+}
