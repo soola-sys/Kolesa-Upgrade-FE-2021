@@ -1,11 +1,10 @@
-@import 'vars.scss';
-@import 'mixins.scss';
+@import './_vars.scss';
+@import './_mixins.scss';
 @import './blocks/aside.scss';
 @import './blocks/buttons.scss';
 @import './blocks/footer.scss';
 @import './blocks/header.scss';
 @import './blocks/main.scss';
-@import './blocks/modal.scss';
 
 #app {
     -webkit-font-smoothing: antialiased;
