@@ -1,4 +1,24 @@
 
-@mixin border() {
-    border-radius: 10px;
+@mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin short-text() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin font-small {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+@mixin font-bold {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
 }

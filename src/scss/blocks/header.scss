@@ -3,19 +3,17 @@
 
 .header {
     &__wrapper {
-        display: flex;
+        @include flex-space;
+
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         padding: 32px 0;
     }
 
     &__inner {
         width: 100%;
         max-width: 1038px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+        @include flex-space;
     }
 
     &__search {

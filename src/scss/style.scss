@@ -4,7 +4,6 @@
 @import './blocks/header.scss';
 @import './blocks/main.scss';
 @import './blocks/button.scss';
-@import './blocks/modal.scss';
 
 #app {
     -webkit-font-smoothing: antialiased;
@@ -26,9 +25,9 @@ a {
 body {
     font-family: 'Open Sans', sans-serif;
     background: $white;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
+
+    @include font-small;
+
     height: 100%;
 }
 

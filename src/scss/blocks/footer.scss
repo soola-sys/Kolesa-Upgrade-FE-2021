@@ -8,10 +8,9 @@
     height: auto;
 
     &__inner {
-        display: flex;
+        @include flex-space;
+
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
     }
 }
 
@@ -29,9 +28,7 @@
 
 .contact {
     &__text {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-space;
     }
 
     &__idea {
@@ -54,8 +51,8 @@
         width: 150px;
         padding: 0 6px;
         box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
-        line-height: 24px;
-        font-size: 14px;
+
+        @include font-small;
 
         &_white {
             color: $light-blue;
