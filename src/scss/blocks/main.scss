@@ -55,7 +55,7 @@
             left: -8px;
             top: -25%;
             border-radius: 10px;
-            background: #2a81dd;
+            background: $light-blue;
             transform: matrix(-1, 0, 0, 1, 0, 0);
             position: absolute;
             transition: width 0.3s;
@@ -141,7 +141,7 @@
         cursor: pointer;
         width: 100%;
         padding: 6px 12px;
-        color: #2a81dd;
+        color: $light-blue;
         border-radius: 8px;
         user-select: none;
         border: 1px solid #1c18191a;
@@ -179,7 +179,7 @@
         text-transform: uppercase;
         background: #64bd38;
         border-radius: 4px;
-        color: white;
+        color: $white;
         padding: 0 4px;
         font-size: 13px;
         line-height: 20px;
@@ -193,7 +193,7 @@
     &__price {
         @include font-bold;
 
-        color: #2a81dd;
+        color: $light-blue;
         margin-bottom: 8px;
 
         &:hover {
@@ -211,7 +211,7 @@
     }
 
     &__size {
-        color: #888b94;
+        color: $gray;
     }
 
     &__button {
@@ -222,8 +222,8 @@
         width: 100%;
 
         &_blue {
-            color: white;
-            background: #2a81dd;
+            color: $white;
+            background: $light-blue;
         }
     }
 }
