@@ -1,0 +1,30 @@
+@import '../_vars.scss';
+@import '../_mixins.scss';
+
+.goods {
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label {
+            background: #d6ecfb;
+            color: #1c1819;
+            border: none;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        width: 100%;
+        padding: 6px 12px;
+        color: $light-blue;
+        border-radius: 8px;
+        user-select: none;
+        border: 1px solid #1c18191a;
+    }
+}

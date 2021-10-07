@@ -1,47 +1,5 @@
 @import '../_vars.scss';
 @import '../_mixins.scss';
-@import 'nav-menu.scss';
-@import 'hotbuttons.scss';
-@import 'goods.scss';
-@import 'catalog.scss';
-
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex: 1 1 auto;
-
-    &__aside {
-        margin-right: 131px;
-    }
-
-    &__products {
-        margin-bottom: 200px;
-    }
-
-    &__promo {
-        margin-bottom: 14px;
-    }
-
-    &__hotbuttons {
-        width: 100%;
-        max-width: 1038px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin-bottom: 40px;
-    }
-
-    &__goods {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 16px;
-        gap: 10px 0;
-        width: 100%;
-    }
-}
 
 .catalog {
     display: grid;
