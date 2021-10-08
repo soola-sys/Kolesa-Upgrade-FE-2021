@@ -1,0 +1,39 @@
+@import '../_vars.scss';
+@import '../_mixins.scss';
+
+.menu {
+    &__list {
+        font-size: 16px;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 36px;
+            left: -8px;
+            top: -25%;
+            border-radius: 10px;
+            background: $light-blue;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            position: absolute;
+            transition: width 0.3s;
+        }
+
+        &:hover::before {
+            content: '';
+            width: 4px;
+        }
+
+        &:hover {
+            font-weight: 600;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
+    }
+}

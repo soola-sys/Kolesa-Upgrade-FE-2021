@@ -1,0 +1,27 @@
+@import '../_vars.scss';
+@import '../_mixins.scss';
+@import 'user.scss';
+@import 'search.scss';
+
+.header {
+    &__wrapper {
+        @include flex-space;
+
+        flex-direction: row;
+        padding: 32px 0;
+    }
+
+    &__inner {
+        width: 100%;
+        max-width: 1038px;
+
+        @include flex-space;
+    }
+
+    &__search {
+        width: 308px;
+        vertical-align: middle;
+        white-space: nowrap;
+        position: relative;
+    }
+}

@@ -1,0 +1,46 @@
+@import '../_vars.scss';
+@import '../_mixins.scss';
+
+.hotbuttons {
+    &_green {
+        background: no-repeat 25px 17px url(/src/assets/krest.png) $p-green;
+
+        &:hover {
+            background-color: #dbfbcd;
+        }
+    }
+
+    &_yellow {
+        background: no-repeat 25px 17px url(/src/assets/question.png) $p-yellow;
+
+        &:hover {
+            background-color: #fff4cc;
+        }
+    }
+
+    &_blue {
+        background: no-repeat 25px 17px url(/src/assets/gift.png) $p-blue;
+
+        &:hover {
+            background-color: #d3e9ff;
+        }
+    }
+
+    &__button {
+        @include font-bold;
+
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    &__item {
+        padding: 22px 73px 22px 89px;
+        border-radius: 16px;
+    }
+
+    &__title {
+        max-width: 330px;
+        overflow: hidden;
+    }
+}

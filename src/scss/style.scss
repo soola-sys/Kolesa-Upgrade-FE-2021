@@ -1,0 +1,45 @@
+@import './_vars.scss';
+@import './_mixins.scss';
+@import './blocks/footer.scss';
+@import './blocks/header.scss';
+@import './blocks/main.scss';
+@import './blocks/button.scss';
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: $white;
+
+    @include font-small;
+
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1368px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
