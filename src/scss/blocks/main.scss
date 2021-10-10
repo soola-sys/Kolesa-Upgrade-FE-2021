@@ -45,7 +45,6 @@
     grid-gap: 0 24px;
 
     &__item {
-        border-radius: 8px;
         max-width: 330px;
         width: 100%;
 
@@ -61,6 +60,10 @@
     &__image {
         display: block;
         position: relative;
+
+        img {
+            border-radius: 8px;
+        }
     }
 
     &__badge {

@@ -2,66 +2,90 @@ import '../scss/style.scss';
 
 const clothes = [
     {
-        id:       0,
-        title:    'Класная футболка',
-        price:    100,
-        isNew:    true,
-        img:      'src/assets/hoodie.png',
-        subtitle: 'Размеры S/M/L',
+        id:    0,
+        title: 'Классный худи',
+        price: 350,
+        isNew: true,
+        img:   'src/assets/hoodie.png',
     },
     {
-        id:       1,
-        title:    'Класная футболка',
-        price:    100,
-        isNew:    true,
-        img:      'src/assets/hoodie.png',
-        subtitle: 'Размеры S/M/L',
+        id:    1,
+        title: 'Класная футболка',
+        price: 220,
+        isNew: true,
+        img:   'src/assets/shirt.png',
     },
     {
-        id:       2,
-        title:    'Класная футболка',
-        price:    550,
-        isNew:    false,
-        img:      'src/assets/hoodie.png',
-        subtitle: 'Размеры S/M/L',
+        id:    2,
+        title: 'Классный худи',
+        price: 350,
+        isNew: false,
+        img:   'src/assets/hoodie.png',
     },
     {
-        id:       3,
-        title:    'Класная футболка',
-        price:    550,
-        isNew:    false,
-        img:      'src/assets/hoodie.png',
-        subtitle: 'Размеры S/M/L',
+        id:    3,
+        title: 'Класная футболка',
+        price: 220,
+        isNew: false,
+        img:   'src/assets/shirt.png',
+    },
+    {
+        id:    4,
+        title: 'Класная куртка',
+        price: 500,
+        isNew: false,
+        img:   'src/assets/lacoste.jpg',
+    },
+    {
+        id:    5,
+        title: 'Класная куртка',
+        price: 500,
+        isNew: true,
+        img:   'src/assets/lacoste.jpg',
     },
 ];
 const accessories = [
     {
-        id:    4,
-        title: 'Класная бутылка',
-        price: 100,
-        isNew: false,
-        img:   'src/assets/bottle.png',
-    },
-    {
-        id:    5,
-        title: 'Класная бутылка',
-        price: 150,
-        isNew: false,
-        img:   'src/assets/bottle.png',
-    },
-    {
         id:    6,
         title: 'Класная бутылка',
-        price: 200,
+        price: 100,
         isNew: true,
         img:   'src/assets/bottle.png',
     },
     {
         id:    7,
         title: 'Класная бутылка',
+        price: 100,
+        isNew: false,
+        img:   'src/assets/bottle.png',
+    },
+    {
+        id:    8,
+        title: 'Класные очки',
+        price: 600,
+        isNew: true,
+        img:   'src/assets/ray.jpg',
+    },
+    {
+        id:    9,
+        title: 'Класный рюкзак',
         price: 550,
         isNew: true,
-        img:   'src/assets/bottle.png',
+        img:   'src/assets/tommy.jpg',
+    },
+    {
+        id:    10,
+        title: 'Класные очки',
+        price: 600,
+        isNew: false,
+        img:   'src/assets/ray.jpg',
+    },
+    {
+        id:    11,
+        title: 'Класный рюкзак',
+        price: 550,
+        isNew: false,
+        img:   'src/assets/tommy.jpg',
     },
 ];
 
@@ -112,7 +136,7 @@ const modalCard = function (title, img, price) {
         </h3>
         <div class="content__wrapper">
             <div class="content__points">
-                <p class="content__text">${price} баллов</p>
+                <p class="content__text">${price}</p>
                 <button class="button content__button  content__button_yellow" type="button">
                     Попросить 50 баллов
                 </button>
@@ -224,7 +248,7 @@ const modalCard = function (title, img, price) {
 </div>
     `;
 };
-const makeProductCard = (title, img, price, isNew, subtitle) => `<div class="catalog__item js-catalog">
+const makeProductCard = (title, img, price, isNew) => `<div class="catalog__item js-catalog">
         <div class="catalog__image">
             <img src= ${img} alt="Shirt" width="330" height="330">
             ${isNew ? '<span class="catalog__badge">new</span>' : ''}
@@ -236,30 +260,31 @@ const makeProductCard = (title, img, price, isNew, subtitle) => `<div class="cat
         <h3 class="catalog__title">
             ${title}
         </h3>
-        <p class="catalog__size">${subtitle} </p>
+        <p class="catalog__size">Размеры S/M/L</p>
         <button class="button catalog__button catalog__button_blue">Заказать</button>
         </div>
 `;
 
 sortAll.forEach((card) => {
     const {
-        title, img, price, isNew, subtitle,
+        title, img, price, isNew,
     } = card;
-    const myCard = makeProductCard(title, img, price, isNew, subtitle);
+    const myCard = makeProductCard(title, img, price, isNew);
 
     document.querySelector('.catalog').innerHTML += myCard;
 });
+
 document.querySelectorAll('.category-label').forEach((item) => {
     item.addEventListener('click', () => {
-        const categoryKey = item.dataset.id;
+        const categoryKey = item.getAttribute('data-id');
 
         if (categoryKey === 'all') {
             document.querySelector('.catalog').innerHTML = '';
             res.forEach((card) => {
                 const {
-                    title, img, price, isNew, subtitle,
+                    title, img, price, isNew,
                 } = card;
-                const myCard = makeProductCard(title, img, price, isNew, subtitle);
+                const myCard = makeProductCard(title, img, price, isNew);
 
                 document.querySelector('.catalog').innerHTML += myCard;
             });
@@ -267,9 +292,9 @@ document.querySelectorAll('.category-label').forEach((item) => {
             document.querySelector('.catalog').innerHTML = '';
             sortCloth.forEach((card) => {
                 const {
-                    title, img, price, isNew, subtitle,
+                    title, img, price, isNew,
                 } = card;
-                const myCard = makeProductCard(title, img, price, isNew, subtitle);
+                const myCard = makeProductCard(title, img, price, isNew);
 
                 document.querySelector('.catalog').innerHTML += myCard;
             });
@@ -277,9 +302,9 @@ document.querySelectorAll('.category-label').forEach((item) => {
             document.querySelector('.catalog').innerHTML = '';
             sortAccess.forEach((card) => {
                 const {
-                    title, img, price, isNew, subtitle,
+                    title, img, price, isNew,
                 } = card;
-                const myCard = makeProductCard(title, img, price, isNew, subtitle);
+                const myCard = makeProductCard(title, img, price, isNew);
 
                 document.querySelector('.catalog').innerHTML += myCard;
             });
@@ -289,7 +314,7 @@ document.querySelectorAll('.category-label').forEach((item) => {
 
 const catalogItem = document.querySelectorAll('.catalog__item');
 const modal = document.querySelector('.modal');
-const outer = document.querySelector('.modal__ruslan');
+const outer = document.querySelector('.modal__flag');
 const closeModal = document.querySelector('.modal__button');
 
 catalogItem.forEach((item) => {
