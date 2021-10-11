@@ -1,47 +1,48 @@
 import '../scss/style.scss';
 
+const imgPath = 'src/assets/';
 const clothes = [
     {
         id:    0,
         title: 'Классный худи',
         price: 350,
         isNew: true,
-        img:   'src/assets/hoodie.png',
+        img:   `${imgPath}hoodie.png`,
     },
     {
         id:    1,
         title: 'Класная футболка',
         price: 220,
         isNew: true,
-        img:   'src/assets/shirt.png',
+        img:   `${imgPath}shirt.png`,
     },
     {
         id:    2,
         title: 'Классный худи',
         price: 350,
         isNew: false,
-        img:   'src/assets/hoodie.png',
+        img:   `${imgPath}hoodie.png`,
     },
     {
         id:    3,
         title: 'Класная футболка',
         price: 220,
         isNew: false,
-        img:   'src/assets/shirt.png',
+        img:   `${imgPath}shirt.png`,
     },
     {
         id:    4,
         title: 'Класная куртка',
         price: 500,
         isNew: false,
-        img:   'src/assets/lacoste.jpg',
+        img:   `${imgPath}lacoste.jpg`,
     },
     {
         id:    5,
         title: 'Класная куртка',
         price: 500,
         isNew: true,
-        img:   'src/assets/lacoste.jpg',
+        img:   `${imgPath}lacoste.jpg`,
     },
 ];
 const accessories = [
@@ -50,7 +51,7 @@ const accessories = [
         title:   'Класная бутылка',
         price:   100,
         isNew:   true,
-        img:     'src/assets/bottle.png',
+        img:     `${imgPath}bottle.png`,
         details: 'Что то',
     },
     {
@@ -58,7 +59,7 @@ const accessories = [
         title:   'Класная бутылка',
         price:   100,
         isNew:   false,
-        img:     'src/assets/bottle.png',
+        img:     `${imgPath}bottle.png`,
         details: 'Что то',
     },
     {
@@ -66,7 +67,7 @@ const accessories = [
         title:   'Класные очки',
         price:   600,
         isNew:   true,
-        img:     'src/assets/ray.jpg',
+        img:     `${imgPath}ray.jpg`,
         details: 'Что то',
     },
     {
@@ -74,7 +75,7 @@ const accessories = [
         title:   'Класный рюкзак',
         price:   550,
         isNew:   true,
-        img:     'src/assets/tommy.jpg',
+        img:     `${imgPath}tommy.jpg`,
         details: 'Что то',
     },
     {
@@ -82,7 +83,7 @@ const accessories = [
         title:   'Класные очки',
         price:   600,
         isNew:   false,
-        img:     'src/assets/ray.jpg',
+        img:     `${imgPath}ray.jpg`,
         details: 'Что то',
     },
     {
@@ -90,15 +91,14 @@ const accessories = [
         title:   'Класный рюкзак',
         price:   550,
         isNew:   false,
-        img:     'src/assets/tommy.jpg',
+        img:     `${imgPath}tommy.jpg`,
         details: 'Что то',
     },
 ];
-
-const sortedClothes = clothes.sort((a, b) => b.isNew - a.isNew);
-const sortedAccessories = accessories.sort((a, b) => b.isNew - a.isNew);
+const sortedClothes = clothes.sort(item => (item.isNew ? -1 : 1));
+const sortedAccessories = accessories.sort(item => (item.isNew ? -1 : 1));
 const mergedProducts = sortedClothes.concat(sortedAccessories);
-const sortedProducts = mergedProducts.sort((a, b) => b.isNew - a.isNew);
+const sortedProducts = mergedProducts.sort(item => (item.isNew ? -1 : 1));
 const makeModalCard = (title, img, price) => `
     <div class="modal-container">
     <div class="modal__inner inner">
