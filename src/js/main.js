@@ -46,55 +46,60 @@ const clothes = [
 ];
 const accessories = [
     {
-        id:    6,
-        title: 'Класная бутылка',
-        price: 100,
-        isNew: true,
-        img:   'src/assets/bottle.png',
+        id:      6,
+        title:   'Класная бутылка',
+        price:   100,
+        isNew:   true,
+        img:     'src/assets/bottle.png',
+        details: 'Что то',
     },
     {
-        id:    7,
-        title: 'Класная бутылка',
-        price: 100,
-        isNew: false,
-        img:   'src/assets/bottle.png',
+        id:      7,
+        title:   'Класная бутылка',
+        price:   100,
+        isNew:   false,
+        img:     'src/assets/bottle.png',
+        details: 'Что то',
     },
     {
-        id:    8,
-        title: 'Класные очки',
-        price: 600,
-        isNew: true,
-        img:   'src/assets/ray.jpg',
+        id:      8,
+        title:   'Класные очки',
+        price:   600,
+        isNew:   true,
+        img:     'src/assets/ray.jpg',
+        details: 'Что то',
     },
     {
-        id:    9,
-        title: 'Класный рюкзак',
-        price: 550,
-        isNew: true,
-        img:   'src/assets/tommy.jpg',
+        id:      9,
+        title:   'Класный рюкзак',
+        price:   550,
+        isNew:   true,
+        img:     'src/assets/tommy.jpg',
+        details: 'Что то',
     },
     {
-        id:    10,
-        title: 'Класные очки',
-        price: 600,
-        isNew: false,
-        img:   'src/assets/ray.jpg',
+        id:      10,
+        title:   'Класные очки',
+        price:   600,
+        isNew:   false,
+        img:     'src/assets/ray.jpg',
+        details: 'Что то',
     },
     {
-        id:    11,
-        title: 'Класный рюкзак',
-        price: 550,
-        isNew: false,
-        img:   'src/assets/tommy.jpg',
+        id:      11,
+        title:   'Класный рюкзак',
+        price:   550,
+        isNew:   false,
+        img:     'src/assets/tommy.jpg',
+        details: 'Что то',
     },
 ];
 
-const sortCloth = clothes.sort((a, b) => b.isNew - a.isNew);
-const sortAccess = accessories.sort((a, b) => b.isNew - a.isNew);
-const sortAll = sortCloth.concat(sortAccess);
-const res = sortAll.sort((a, b) => b.isNew - a.isNew);
-const modalCard = function (title, img, price) {
-    return `
+const sortedClothes = clothes.sort((a, b) => b.isNew - a.isNew);
+const sortedAccessories = accessories.sort((a, b) => b.isNew - a.isNew);
+const mergedProducts = sortedClothes.concat(sortedAccessories);
+const sortedProducts = mergedProducts.sort((a, b) => b.isNew - a.isNew);
+const makeModalCard = (title, img, price) => `
     <div class="modal-container">
     <div class="modal__inner inner">
         <div class="inner__image">
@@ -247,15 +252,14 @@ const modalCard = function (title, img, price) {
     </div>
 </div>
     `;
-};
-const makeProductCard = (title, img, price, isNew) => `<div class="catalog__item js-catalog">
+const makeProductCard = (title, img, price, isNew) => `<div class="catalog__item">
         <div class="catalog__image">
             <img src= ${img} alt="Shirt" width="330" height="330">
             ${isNew ? '<span class="catalog__badge">new</span>' : ''}
         </div>
         <div class="catalog__description">
         <div class="catalog__price">
-            ${price} баллов
+            ${price}
         </div>
         <h3 class="catalog__title">
             ${title}
@@ -265,75 +269,57 @@ const makeProductCard = (title, img, price, isNew) => `<div class="catalog__item
         </div>
 `;
 
-sortAll.forEach((card) => {
+function addProducts(card) {
     const {
         title, img, price, isNew,
     } = card;
     const myCard = makeProductCard(title, img, price, isNew);
 
-    document.querySelector('.catalog').innerHTML += myCard;
+    document.querySelector('.js-catalog').innerHTML += myCard;
+}
+mergedProducts.forEach((card) => {
+    addProducts(card);
 });
 
-document.querySelectorAll('.category-label').forEach((item) => {
+document.querySelectorAll('.js-category').forEach((item) => {
     item.addEventListener('click', () => {
         const categoryKey = item.getAttribute('data-id');
 
         if (categoryKey === 'all') {
-            document.querySelector('.catalog').innerHTML = '';
-            res.forEach((card) => {
-                const {
-                    title, img, price, isNew,
-                } = card;
-                const myCard = makeProductCard(title, img, price, isNew);
-
-                document.querySelector('.catalog').innerHTML += myCard;
+            document.querySelector('.js-catalog').innerHTML = '';
+            sortedProducts.forEach((card) => {
+                addProducts(card);
             });
         } else if (categoryKey === 'cloth') {
-            document.querySelector('.catalog').innerHTML = '';
-            sortCloth.forEach((card) => {
-                const {
-                    title, img, price, isNew,
-                } = card;
-                const myCard = makeProductCard(title, img, price, isNew);
-
-                document.querySelector('.catalog').innerHTML += myCard;
+            document.querySelector('.js-catalog').innerHTML = '';
+            sortedClothes.forEach((card) => {
+                addProducts(card);
             });
         } else if (categoryKey === 'accessories') {
-            document.querySelector('.catalog').innerHTML = '';
-            sortAccess.forEach((card) => {
-                const {
-                    title, img, price, isNew,
-                } = card;
-                const myCard = makeProductCard(title, img, price, isNew);
-
-                document.querySelector('.catalog').innerHTML += myCard;
+            document.querySelector('.js-catalog').innerHTML = '';
+            sortedAccessories.forEach((card) => {
+                addProducts(card);
             });
         }
     });
 });
-
-const catalogItem = document.querySelectorAll('.catalog__item');
 const modal = document.querySelector('.modal');
 const outer = document.querySelector('.modal__flag');
-const closeModal = document.querySelector('.modal__button');
 
-catalogItem.forEach((item) => {
-    item.addEventListener('click', (e) => {
+document.querySelectorAll('.catalog__item').forEach((item) => {
+    item.addEventListener('click', () => {
         modal.style.display = 'block';
         const image = item.querySelector('img').src;
-
         const price = item.querySelector('.catalog__price').innerHTML;
         const title = item.querySelector('.catalog__title').innerHTML;
 
-        const temp = modalCard(title, image, price);
+        const temp = makeModalCard(title, image, price);
 
         outer.innerHTML += temp;
-        console.log(e.target);
     });
 });
-closeModal.addEventListener('click', (e) => {
+document.querySelector('.modal__button').addEventListener('click', () => {
     modal.style.display = 'none';
-    console.log(e.target);
 
     if (outer.querySelector('.modal-container')) {
         outer.querySelector('.modal-container').remove();
