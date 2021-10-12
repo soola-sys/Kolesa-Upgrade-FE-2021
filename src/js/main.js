@@ -266,7 +266,8 @@ const makeModalCard = (title, img, price) => `
     </div>
 </div>
     `;
-const makeProductCard = (title, img, price, isNew) => `<div class="catalog__item">
+const makeProductCard = (title, img, price, isNew) => `
+        <div class="catalog__item">
         <div class="catalog__image">
             <img src= ${img} alt="Shirt" width="330" height="330">
             ${isNew ? '<span class="catalog__badge">new</span>' : ''}
