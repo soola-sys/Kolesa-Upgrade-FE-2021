@@ -94,11 +94,25 @@ const accessories = [
         img:     `${imgPath}tommy.jpg`,
         details: 'Что то',
     },
+    {
+        id:      12,
+        title:   'Класный рюкзак',
+        price:   600,
+        isNew:   false,
+        img:     `${imgPath}tommy.jpg`,
+        details: 'Что то',
+    },
 ];
-const sortedClothes = clothes.sort(item => (item.isNew ? -1 : 1));
-const sortedAccessories = accessories.sort(item => (item.isNew ? -1 : 1));
+
+function sortArray(arr) {
+    arr.sort(item => (item.isNew ? -1 : 1));
+
+    return arr;
+}
+const sortedClothes = sortArray(clothes);
+const sortedAccessories = sortArray(accessories);
 const mergedProducts = sortedClothes.concat(sortedAccessories);
-const sortedProducts = mergedProducts.sort(item => (item.isNew ? -1 : 1));
+const sortedProducts = sortArray(mergedProducts);
 const makeModalCard = (title, img, price) => `
     <div class="modal-container">
     <div class="modal__inner inner">
@@ -280,6 +294,8 @@ function addProducts(card) {
 mergedProducts.forEach((card) => {
     addProducts(card);
 });
+const modal = document.querySelector('.modal');
+const outer = document.querySelector('.modal__flag');
 
 document.querySelectorAll('.js-category').forEach((item) => {
     item.addEventListener('click', () => {
@@ -301,23 +317,35 @@ document.querySelectorAll('.js-category').forEach((item) => {
                 addProducts(card);
             });
         }
+
+        document.querySelectorAll('.catalog__item').forEach((event) => {
+            event.addEventListener('click', () => {
+                modal.style.display = 'block';
+                const image =  event.querySelector('img').src;
+                const price = event.querySelector('.catalog__price').innerHTML;
+                const title =  event.querySelector('.catalog__title').innerHTML;
+
+                const temp = makeModalCard(title, image, price);
+
+                outer.innerHTML += temp;
+            });
+        });
     });
 });
-const modal = document.querySelector('.modal');
-const outer = document.querySelector('.modal__flag');
 
 document.querySelectorAll('.catalog__item').forEach((item) => {
     item.addEventListener('click', () => {
         modal.style.display = 'block';
-        const image = item.querySelector('img').src;
+        const image =  item.querySelector('img').src;
         const price = item.querySelector('.catalog__price').innerHTML;
-        const title = item.querySelector('.catalog__title').innerHTML;
+        const title =  item.querySelector('.catalog__title').innerHTML;
 
         const temp = makeModalCard(title, image, price);
 
         outer.innerHTML += temp;
     });
 });
+
 document.querySelector('.modal__button').addEventListener('click', () => {
     modal.style.display = 'none';
 
