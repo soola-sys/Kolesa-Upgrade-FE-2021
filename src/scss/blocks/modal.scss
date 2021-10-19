@@ -1,0 +1,245 @@
+@import '../_vars.scss';
+@import '../_mixins.scss';
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(28, 24, 25, 0.6);
+
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1040px;
+        background: #fff;
+        border-radius: 16px;
+    }
+
+    &__outer {
+        text-align: center;
+        padding: 60px 56px;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 25px;
+    }
+
+    &__inner {
+        margin-right: 23px;
+    }
+
+    &__button {
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        color: $gray;
+        border-radius: 2px;
+    }
+
+    &__image {
+        margin-bottom: 16px;
+    }
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner {
+    &__mini > button {
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &__image {
+        &_small:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &_small:active {
+            border: 1px solid #2a81dd;
+            border-radius: 8px;
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: 573px;
+    text-align: left;
+
+    &__title {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        align-items: flex-end;
+    }
+
+    &__text {
+        font-weight: 600;
+
+        @include font-bold;
+
+        padding: 8px 0;
+    }
+
+    &__button {
+        height: 36px;
+        padding: 6px 0;
+        box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+        width: 184px;
+
+        &_yellow {
+            background: #ffdd61;
+            color: $black;
+        }
+    }
+
+    &__balance {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0fafd;
+        border-radius: 16px;
+    }
+}
+
+.balance {
+    &__description {
+        padding: 8px 0 8px 8px;
+    }
+
+    &__title {
+        color: $gray;
+    }
+
+    &__image {
+        background: url(/src/assets/bag.png);
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+}
+
+.product-color {
+    &__wrapper > div {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__color {
+        display: flex;
+        flex-direction: row;
+        max-width: 573px;
+        flex-wrap: wrap;
+        gap: 8px 0;
+    }
+}
+
+/* Styling Options for colors */
+.color {
+    &__item {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        padding: 8px;
+
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__image {
+        background: url(/src/assets/color1.png);
+        width: 23px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + &__label {
+            background: #d6ecfb;
+            color: $black;
+            border: none;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.product-size {
+    &__title {
+        margin-bottom: 8px;
+    }
+}
+
+.options {
+    &__radio {
+        color: $light-blue;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label {
+            background: #d6ecfb;
+            color: #1c1819;
+            border: none;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 8px 16px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        border-radius: 8px;
+    }
+}
+
+.product-info {
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+    }
+}
